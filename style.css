@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 450px;
+  width: 100%;
+}
+
+h1 {
+  color: #38bdf8;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* إعدادات اللاعبين */
+.player-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  background-color: #1e293b;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #94a3b8;
+}
+
+.input-group input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background-color: #0f172a;
+  color: #fff;
+  outline: none;
+  width: 65%;
+}
+
+.input-group input:focus {
+  border-color: #38bdf8;
+}
+
+/* الأزرار */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #0369a1;
+}
+
+.btn-restart {
+  background-color: #e11d48;
+}
+
+.btn-restart:hover {
+  background-color: #be123c;
+}
+
+/* عرض حالة اللعبة */
+.status-display {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #facc15;
+  text-align: center;
+  min-height: 30px;
+}
+
+/* شبكة اللعبة 3x3 */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+}
+
+.cell {
+  background-color: #1e293b;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.cell:hover {
+  background-color: #334155;
+}
+
+.cell:active {
+  transform: scale(0.95);
+}
+
+/* ألوان علامات X و O */
+.cell[data-marker="X"] {
+  color: #38bdf8;
+}
+
+.cell[data-marker="O"] {
+  color: #f43f5e;
+}

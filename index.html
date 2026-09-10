@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe (X-O)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>لعبة Tic-Tac-Toe</h1>
+
+<form id="player-form" class="player-setup">
+  <div class="input-group">
+    <label for="player1-input">اللاعب X:</label>
+    <input type="text" id="player1-input" placeholder="اسم اللاعب الأول" required>
+  </div>
+  <div class="input-group">
+    <label for="player2-input">اللاعب O:</label>
+    <input type="text" id="player2-input" placeholder="اسم اللاعب الثاني" required>
+  </div>
+  <button id="start-btn" type="submit" class="btn">بدء اللعبة</button>
+</form>
+
+    <!-- عرض حالة اللعبة والدور -->
+    <div id="game-status" class="status-display">اضغط على "بدء اللعبة" للبدء!</div>
+
+    <!-- رقعة اللعبة (3x3) مع معرفات IDs للمربعات -->
+    <div id="gameboard" class="board">
+      <button class="cell" id="cell-0" data-index="0"></button>
+      <button class="cell" id="cell-1" data-index="1"></button>
+      <button class="cell" id="cell-2" data-index="2"></button>
+      <button class="cell" id="cell-3" data-index="3"></button>
+      <button class="cell" id="cell-4" data-index="4"></button>
+      <button class="cell" id="cell-5" data-index="5"></button>
+      <button class="cell" id="cell-6" data-index="6"></button>
+      <button class="cell" id="cell-7" data-index="7"></button>
+      <button class="cell" id="cell-8" data-index="8"></button>
+    </div>
+
+    <!-- زر إعادة التشغيل -->
+    <button id="restart-btn" class="btn btn-restart">إعادة التشغيل</button>
+  </div>
+
+  <script src="project.js"></script>
+</body>
+</html>
